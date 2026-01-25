@@ -49,9 +49,26 @@ int main()
     // another way to initialize vector
     vector<int> vec2 = {1, 2, 3, 4, 5};
 
-    //! creating a vector that has same element and also it's size defined
+    // TODO creating a vector that has same element and also it's size defined
     vector<int> vec3(3, 10); // size 3, value 10
 
     // copy a vector from another vector
     vector<int> vec4(vec);
+
+    // erase (remove element of any specific index)
+    vec.erase(vec.begin()); // here vec.begin()  returns the memory location of index 0
+    // for deleting index 2
+    vec.erase(vec.begin() + 2);
+    // remove a range of numbers
+    vec.erase(vec.begin() + 1, vec.begin() + 3);
+    //! note that erase or clear function can't change the capacity of a vector
+
+    // insert any element at specific index
+    vec.insert(vec.begin() + 2, 100); // insert 100 at index 2
+
+    // clear a vector
+    vec3.clear();
+
+    // check for if a vector is empty
+    cout << "Vec3 empty: " << vec3.empty() << endl;
 }
