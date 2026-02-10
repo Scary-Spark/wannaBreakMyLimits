@@ -1,8 +1,7 @@
-var n = 5;
-n++;
-n--;
---n;
-++n;
+function processName(name) {
+  console.log("Old Name: " + name);
+  return name + " Spark";
+}
 
-// by using slice we can return(not remove) a specific part of a string.
-// word.slice(x,y) // slice from x to (y-1)
+var newName = processName("Scary");
+console.log("New name: " + newName);
