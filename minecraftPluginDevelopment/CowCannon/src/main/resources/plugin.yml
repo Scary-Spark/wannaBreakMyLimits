@@ -1,0 +1,26 @@
+name: CowCannon
+description: $description
+version: '1.0'
+
+main: me.spark.cowCannon.CowCannon
+api-version: '1.21'
+load: POSTWORLD
+
+authors: [ Scary_Spark ]
+
+commands:
+  cow:
+    description: "Spawn an exploding cow"
+    usage: "/command [baby]"
+    aliases: [ cw, cowcannon ]
+    permission: cowcannon.command.cow
+    permission-message: "&bYou don't have permission NIGGA"
+
+permissions:
+  cowcannon.command.cow:
+    description: Allows usage of /cow
+    default: true
+
+  cowcannon.command.cow.baby:
+    description: Allows usage of /cow baby
+    default: op
