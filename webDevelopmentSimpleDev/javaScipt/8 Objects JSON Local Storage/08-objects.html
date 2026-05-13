@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects</title>
+  </head>
+  <body>
+    <script>
+      const product = {
+        name: "socks",
+        price: 1084,
+      };
+
+      console.log(product);
+      console.log(product.name);
+      console.log(product.price);
+
+      // add new propery
+      product.stock = 14;
+      console.log(product);
+
+      // delete property
+      delete product.stock;
+      console.log(product);
+
+      // access data using bracket notation
+      console.log(`Name of the product: ${product["name"]}`);
+      console.log(`Price of the product: ${product["price"]}`);
+
+      const product2 = {
+        name: "Shirt",
+        ["delivery-time"]: "1 Day",
+        "day-to-delivery": "Monday",
+
+        // object inside object:
+        rating: {
+          stars: 4.5,
+          count: 84,
+        },
+
+        // function inside object
+        fun: function function1() {
+          console.log("function inside object");
+        },
+      };
+      console.log(product2["delivery-time"]);
+      console.log(product2.rating);
+      console.log(product2.rating.count);
+      product2.fun();
+
+      // JSON = JavaScript Object Notation
+      // js to JSON
+      console.log(JSON.stringify(product2));
+      // note: JSON does not support functions
+
+      // JSON to JS
+      const jsonString = JSON.stringify(product2);
+      console.log(JSON.parse(jsonString));
+
+      // local Storage
+      localStorage.setItem("message", "hello");
+      // message is the property and hello is the value
+      // also note that value should be string
+      // so we can use JSON.stringfy() to convert our objects into string when needed
+
+      // get value from local storage
+      console.log(localStorage.getItem("message"));
+
+      console.log("hello".length);
+
+      const object1 = {
+        message: "hello",
+      };
+    </script>
+  </body>
+</html>
