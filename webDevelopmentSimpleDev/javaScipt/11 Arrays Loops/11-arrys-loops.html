@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays and Loops</title>
+  </head>
+  <body>
+    <script>
+      const myArray = [10, 20, 30];
+      console.log(myArray);
+
+      myArray[0] = 15;
+      console.log(myArray[0]);
+
+      // in js array can consists any types of values
+      const newArray = [
+        11,
+        "Hello World",
+        true,
+        {
+          name: "socks",
+          price: 20,
+        },
+        [1, 2, 3],
+      ];
+
+      console.log(typeof [1, 2]); // array is special type of object
+
+      // check if it's a array
+      console.log(Array.isArray([1, 2, 3]));
+
+      // length of array
+      console.log(newArray.length);
+
+      myArray.push(100);
+
+      // remove a value from array
+      myArray.splice(0, 1); // index 0, 1 number of value to be removed
+    </script>
+  </body>
+</html>
