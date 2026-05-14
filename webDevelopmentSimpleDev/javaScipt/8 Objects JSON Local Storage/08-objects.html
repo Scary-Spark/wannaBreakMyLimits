@@ -72,6 +72,30 @@
       const object1 = {
         message: "hello",
       };
+
+      // destruction
+      const object4 = {
+        message: "Good Job!",
+        price: 799,
+      };
+
+      const { message, price } = object4;
+      console.log(message);
+      console.log(price);
+
+      // shorthand property
+      const object5 = {
+        // message: message,  can be replaced with
+        message,
+
+        //shorthand method
+        method() {
+          console.log("method");
+        },
+      };
+
+      console.log(object5);
+      obejct5.method();
     </script>
   </body>
 </html>
